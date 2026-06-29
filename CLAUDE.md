@@ -20,6 +20,7 @@ bash install.sh
 | Source                   | Symlink target                                                       |
 | ------------------------ | -------------------------------------------------------------------- |
 | `zsh/.zshrc`             | `~/.zshrc`                                                           |
+| `nvim/`                  | `~/.config/nvim`                                                     |
 | `git/.gitconfig`         | `~/.gitconfig`                                                       |
 | `starship/starship.toml` | `~/.config/starship.toml`                                            |
 | `ghostty/config.ghostty` | `~/Library/Application Support/com.mitchellh.ghostty/config.ghostty` |
@@ -30,6 +31,7 @@ bash install.sh
 - **`git/.gitconfig`** — ghq root (`~/src`)・デフォルトブランチ (`main`)
 - **`starship/starship.toml`** — プロンプト設定: ディレクトリ省略・git ブランチ/ステータス/メトリクス
 - **`ghostty/config.ghostty`** — Ghostty ターミナルの外観設定 (背景透過度など)
+- **`nvim/`** — LazyVim ベースの Neovim 設定。extras で Go / TypeScript / JSON を有効化。`lua/config/` に options・keymaps・lazy を配置し、`lua/plugins/` にプラグイン追加設定を置く
 
 ## 制約事項
 
