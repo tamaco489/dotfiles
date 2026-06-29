@@ -1,0 +1,24 @@
+add_newline = false
+
+[directory]
+truncation_length = 4
+truncation_symbol = ".../"
+truncate_to_repo = false
+
+[character]
+success_symbol = '[❯](bold green)'
+error_symbol = '[❯](bold red)'
+
+[git_branch]
+format = "[$symbol $branch]($style) "
+symbol = ""
+
+[git_status]
+style = "bold red"
+untracked = ""
+
+[git_metrics]
+disabled = false
+added_style = 'bold blue'
+format = '\([+$added]($added_style)/[-$deleted]($deleted_style)\)'
+only_nonzero_diffs = true
