@@ -1,4 +1,21 @@
 [ghq]
 	root = ~/src
+
 [init]
 	defaultBranch = main
+
+[core]
+	editor = nvim      # デフォルトエディタ
+	autocrlf = input   # コミット時に CRLF が混入していた場合 LF に変換する (macOS/Linux 向け)
+
+[push]
+	default = current  # ブランチ名を省略して git push できる
+
+[pull]
+	rebase = false     # pull 時は merge を使う
+
+[alias]
+	st = status
+	co = checkout
+	br = branch
+	lg = log --oneline --graph --decorate
