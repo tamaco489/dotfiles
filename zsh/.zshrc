@@ -166,9 +166,11 @@ export PATH="/opt/homebrew/opt/python@3.12/libexec/bin:$PATH"
 # ========================================================================
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
-# asdf golang - go install したバイナリを PATH に追加
-export GOBIN="$(asdf where golang 2>/dev/null)/bin"
-export PATH="${GOBIN}:${PATH}"
+# asdf golang - go install したバイナリの置き場所
+# asdf の Go バージョンに依存しない固定パスにする
+# バージョン連動にするとシェル起動時の値が焼き付き、別バージョンが有効な
+# ディレクトリでツールを解決できなくなる (~/.local/bin は既に PATH 上にある)
+export GOBIN="$HOME/.local/bin"
 
 
 # ========================================================================
