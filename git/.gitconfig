@@ -19,9 +19,15 @@
 	co = checkout
 	br = branch
 	lg = log --oneline --graph --decorate
+
 [credential "https://github.com"]
-	helper = 
+	# 空の値で既存の helper (システム設定の osxkeychain など) をリセットし、古い認証情報が優先されるのを防ぐ
+	helper =
+	# gh auth login で取得したトークンを使う
 	helper = !/opt/homebrew/bin/gh auth git-credential
+
 [credential "https://gist.github.com"]
-	helper = 
+	# 空の値で既存の helper (システム設定の osxkeychain など) をリセットし、古い認証情報が優先されるのを防ぐ
+	helper =
+	# gh auth login で取得したトークンを使う
 	helper = !/opt/homebrew/bin/gh auth git-credential
