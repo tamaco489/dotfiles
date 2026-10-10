@@ -18,8 +18,13 @@
 	st = status
 	co = checkout
 	sw = switch
+	swc = switch -c
 	br = branch
-	lg = log --oneline --graph --decorate
+	brd = branch -D
+	brm = branch -M
+	ss = stash
+	sp = stash pop
+	lg = log --oneline --graph --decorate -20
 
 [credential "https://github.com"]
 	# 空の値で既存の helper (システム設定の osxkeychain など) をリセットし、古い認証情報が優先されるのを防ぐ
