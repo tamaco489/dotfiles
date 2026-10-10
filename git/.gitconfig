@@ -17,6 +17,7 @@
 [alias]
 	st = status
 	co = checkout
+	sw = switch
 	br = branch
 	lg = log --oneline --graph --decorate
 
