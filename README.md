@@ -58,6 +58,13 @@ exec zsh
   ターミナルを開き直したあと、`echo $SHELL` が `/bin/zsh` を返せば成功
 
 - `~/.zshrc.local` を手動で作成する (機密情報・環境依存の設定を置く。git 管理外)
+- `.zshrc` の `gitcfu` / `gitcfe` は git の user.name / user.email をハードコードしている。別のアカウントで使う端末では `~/.zshrc.local` で上書きする (`~/.zshrc.local` は `.zshrc` の末尾で読み込まれるため、同名の alias が優先される)
+
+  ```sh
+  alias gitcfu="git config --local user.name '<name>'"
+  alias gitcfe="git config --local user.email '<email>'"
+  ```
+
 - Go をインストールする
 
   ```sh
