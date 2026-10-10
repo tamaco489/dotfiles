@@ -4,6 +4,8 @@ set -e
 
 DOTFILES="$(cd "$(dirname "$0")" && pwd)"
 
+mkdir -p ~/.config "$HOME/Library/Application Support/com.mitchellh.ghostty"
+
 ln -sf "$DOTFILES/zsh/.zshrc" ~/.zshrc
 ln -sf "$DOTFILES/nvim" ~/.config/nvim
 ln -sf "$DOTFILES/git/.gitconfig" ~/.gitconfig
