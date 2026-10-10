@@ -101,41 +101,6 @@ alias ghql="ghq list -p"
 
 
 # ========================================================================
-# aws cli
-# ========================================================================
-# s3
-create-tfstate-bucket() {
-  local AWS_PROFILE="$1"
-  local AWS_BUCKET_NAME="$2"
-  if [[ -z "$AWS_PROFILE" || -z "$AWS_BUCKET_NAME" ]]; then
-    echo "使い方: create-tfstate-bucket <AWS_PROFILE> <AWS_BUCKET_NAME>"
-    echo "例) $ create-tfstate-bucket my-profile my-tfstate-bucket"
-    return 1
-  fi
-  echo "S3 バケット '$AWS_BUCKET_NAME' を作成します."
-  AWS_PROFILE="$AWS_PROFILE" aws s3 mb s3://"$AWS_BUCKET_NAME"
-  echo "S3 バケット '$AWS_BUCKET_NAME' のバージョニングを有効化します."
-  AWS_PROFILE="$AWS_PROFILE" aws s3api put-bucket-versioning \
-      --bucket "$AWS_BUCKET_NAME" \
-      --versioning-configuration Status=Enabled
-}
-
-delete-tfstate-bucket() {
-  local AWS_PROFILE="$1"
-  local AWS_BUCKET_NAME="$2"
-  if [[ -z "$AWS_PROFILE" || -z "$AWS_BUCKET_NAME" ]]; then
-    echo "使い方: delete-tfstate-bucket <AWS_PROFILE> <AWS_BUCKET_NAME>"
-    echo "例) $ delete-tfstate-bucket my-profile my-tfstate-bucket"
-    return 1
-  fi
-  echo "S3 バケット '$AWS_BUCKET_NAME' のすべてのオブジェクトを削除します..."
-  AWS_PROFILE="$AWS_PROFILE" aws s3 rm s3://"$AWS_BUCKET_NAME" --recursive
-  echo "S3 バケット '$AWS_BUCKET_NAME' を削除します..."
-  AWS_PROFILE="$AWS_PROFILE" aws s3 rb s3://"$AWS_BUCKET_NAME"
-}
-
-
-# ========================================================================
 # claude
 # ========================================================================
 alias claude-auto='claude --dangerously-skip-permissions'
