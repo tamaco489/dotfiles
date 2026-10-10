@@ -10,9 +10,14 @@ macOS (Apple Silicon) 向けの個人 dotfiles。
 ```sh
 # Homebrew (未導入の場合)
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 
+```sh
 brew install git gh ghq fzf starship neovim asdf \
-  zsh-syntax-highlighting zsh-autosuggestions python@3.12
+ zsh-syntax-highlighting zsh-autosuggestions python@3.12
+```
+
+```sh
 brew install --cask ghostty
 ```
 
@@ -20,12 +25,17 @@ brew install --cask ghostty
 
 ```sh
 gh auth login
+```
+
+```sh
 git clone https://github.com/tamaco489/dotfiles.git ~/dotfiles
+```
 
-# install.sh はリンク先の親ディレクトリを作成しない
-mkdir -p ~/.config "$HOME/Library/Application Support/com.mitchellh.ghostty"
-
+```sh
 bash ~/dotfiles/install.sh
+```
+
+```sh
 exec zsh
 ```
 
@@ -38,6 +48,14 @@ exec zsh
 | `ghostty/config.ghostty` | `~/Library/Application Support/com.mitchellh.ghostty/config.ghostty` |
 
 ### 3. 実行後の作業
+
+- ログインシェルが bash のままの場合は zsh に切り替える (パスワード入力が必要)
+
+  ```sh
+  chsh -s /bin/zsh
+  ```
+
+  ターミナルを開き直したあと、`echo $SHELL` が `/bin/zsh` を返せば成功
 
 - `~/.zshrc.local` を手動で作成する (機密情報・環境依存の設定を置く。git 管理外)
 - Go をインストールする
