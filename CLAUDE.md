@@ -27,7 +27,7 @@ bash install.sh
 
 ## 構成概要
 
-- **`zsh/.zshrc`** — エイリアス・履歴・プラグイン (zsh-syntax-highlighting, zsh-autosuggestions)・fzf・ghq・git/gh・AWS CLI ヘルパー・asdf PATH 設定。機密情報は `~/.zshrc.local` (git 管理外) に分離し末尾で source する
+- **`zsh/.zshrc`** — エイリアス・履歴・プラグイン (zsh-syntax-highlighting, zsh-autosuggestions)・fzf・ghq・git/gh・asdf PATH 設定。機密情報は `~/.zshrc.local` (git 管理外) に分離し末尾で source する
 - **`git/.gitconfig`** — ghq root (`~/src`)・デフォルトブランチ (`main`)
 - **`starship/starship.toml`** — プロンプト設定: ディレクトリ省略・git ブランチ/ステータス/メトリクス
 - **`ghostty/config.ghostty`** — Ghostty ターミナルの外観設定 (背景透過度など)
