@@ -3,12 +3,11 @@
 # ========================================================================
 alias salias="source ~/.zshrc"
 alias calias="code ~/.zshrc"
+alias calias-local="code ~/.zshrc.local"
 
-alias cbrain="code ~/Desktop/work/brain"
 alias cdot="code ~/dotfiles"
 
 alias cdu="cd ~/Desktop"
-alias cdb="cd ~/Desktop/work/brain"
 alias cdd="cd ~/dotfiles"
 
 
