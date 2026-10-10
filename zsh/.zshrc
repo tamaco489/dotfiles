@@ -3,12 +3,11 @@
 # ========================================================================
 alias salias="source ~/.zshrc"
 alias calias="code ~/.zshrc"
+alias calias-local="code ~/.zshrc.local"
 
-alias cbrain="code ~/Desktop/work/brain"
 alias cdot="code ~/dotfiles"
 
 alias cdu="cd ~/Desktop"
-alias cdb="cd ~/Desktop/work/brain"
 alias cdd="cd ~/dotfiles"
 
 
@@ -24,6 +23,7 @@ setopt hist_ignore_all_dups # 重複するコマンドは履歴に追加しな�
 setopt hist_ignore_space # スペースで始まるコマンドは履歴に追加しない
 setopt hist_reduce_blanks # 履歴に保存するとき余分なスペースを削除
 
+alias history='history -500'
 
 # =================================================================
 # zsh plugins
